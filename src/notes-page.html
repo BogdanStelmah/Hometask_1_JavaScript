@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Notes</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <main class="page">
+                <div class="__container">
+                    <div class="block__for__all__notes">
+                        <table class="table__notes" id="table__notes">
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Created</th>
+                                <th>Category</th>
+                                <th>Content</th>
+                                <th>Dates</th>
+                                <th>
+                                    <img src="../image/download-button.png" class="image__category">
+                                    <img src="../image/delete-white.png" class="image__category">
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <button class="button__create__note" id="button_create_note">
+                        Create Note
+                    </button>
+
+                    <div class="block__for__category">
+                        <table class="table__notes" id="table__category">
+                            <tr>
+                                <th></th>
+                                <th>Note Category</th>
+                                <th>Active</th>
+                                <th>Archived</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="notes__image">
+                                        <img src="../image/shopping-cart.png" class="image__category">
+                                    </div>
+                                </td>
+                                <td>Task</td>
+                                <td>13</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="notes__image">
+                                        <img src="../image/idea.png" class="image__category">
+                                    </div>
+                                </td>
+                                <td>Idea</td>
+                                <td>7</td>
+                                <td>12</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="create_modal">
+                    <h3 class="modal__title">Create note</h3>
+                    <form method="post" class="modal__form">
+                        <label>
+                            Name:
+                            <input type="text" name="name">
+                        </label>
+                        <label>
+                            Category:
+                            <select name="category">
+                                <option>Task</option>
+                                <option>Random Thought</option>
+                                <option>Idea</option>
+                            </select>
+                        </label>
+                        <label>
+                            Content:
+                            <textarea name="content"></textarea>
+                        </label>
+                        <button type="submit">Create</button>
+                        <button type="reset" id="button__cancel">Cancel</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+
+        <script src="repositories/notes.repository.js" type="module"></script>
+        <script src="app.js" type="module"></script>
+    </body>
+</html>
