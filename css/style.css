@@ -1,0 +1,112 @@
+/*___Онулення___*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html, body {
+    height: 100%;
+    line-height: 1;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.__container {
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/*___Таблиця___*/
+.notes__image{
+    background-color: rgb(97,97,97);
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image__category {
+    width: 20px;
+}
+
+.table__notes {
+    width: 100%;
+    padding-top: 20px;
+    text-align: left;
+    border-spacing: 0 10px;
+}
+
+.table__notes th {
+    background-color: rgb(153, 153, 153);
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+}
+.table__notes th:nth-child(1){
+    border-radius: 6px 0 0 6px;
+}
+.table__notes th:last-child{
+    border-radius: 0 6px 6px 0;
+}
+
+.table__notes td {
+    background-color: rgb(232, 234, 245);
+    padding: 7px;
+    font-weight: 600;
+    color: #545454;
+}
+.table__notes td:nth-child(1) {
+    border-radius: 6px 0 0 6px;
+}
+.table__notes td:last-child{
+    border-radius: 0 6px 6px 0;
+}
+.block__for__all__notes > .table__notes tr td:last-child, .block__for__all__notes > .table__notes tr th:last-child{
+    text-align: right;
+}
+
+
+/*___Button___*/
+.button__create__note {
+    width: 100px;
+    height: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+/*___Archive___*/
+.block__for__archive__notes, .block__for__all__notes {
+    width: 100%;
+}
