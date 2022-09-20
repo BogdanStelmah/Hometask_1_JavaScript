@@ -147,7 +147,7 @@ html, body {
 .create_modal::before, .modal__edit__form::before {
     content: '';
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     background-color: rgba(84, 84, 84, 0.41);
     position: absolute;
     top: 50%;
@@ -180,7 +180,9 @@ html, body {
 }
 
 .show {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
 }
 
 .overflow__hidden {
