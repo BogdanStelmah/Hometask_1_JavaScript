@@ -1,11 +1,13 @@
 import {clearTable, renderFieldsForNote, renderImage} from "./table-render-tools.js";
-import {deleteNote, getNotes} from "../repositories/notes.repository.js";
+import {archivedNote, deleteNote, getNotes} from "../repositories/notes.repository.js";
+import {showEditModal} from "../events/edit-note.events.js";
+import {renderComponents} from "../app.js";
 
 //Icon paths for note operations
 const crudIcon = {
-    edit: '../image/pencil.png',
-    delete: '../image/delete.png',
-    archiving: '../image/download-button%20(1).png',
+    edit: ' https://cdn-icons-png.flaticon.com/512/650/650194.png',
+    delete: ' https://cdn-icons-png.flaticon.com/512/565/565491.png',
+    archiving: 'https://cdn-icons-png.flaticon.com/512/61/61016.png',
 }
 
 //Rendering of html notes
@@ -40,14 +42,16 @@ export const renderNotes = (tableNotes) => {
             image.addEventListener('click', (e) => {
                 switch (e.target.className.split(' ')[1]) {
                     case 'edit':
+                        showEditModal(item);
                         break;
                     case 'delete':
                         deleteNote(item.key);
-                        renderNotes(tableNotes);
                         break;
                     case 'archiving':
+                        archivedNote(item.key);
                         break;
                 }
+                renderComponents();
             })
 
             td.appendChild(image)

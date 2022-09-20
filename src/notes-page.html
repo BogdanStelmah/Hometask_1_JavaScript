@@ -19,8 +19,8 @@
                                 <th>Content</th>
                                 <th>Dates</th>
                                 <th>
-                                    <img src="../image/download-button.png" class="image__category">
-                                    <img src="../image/delete-white.png" class="image__category">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/650/650194.png" class="image__category">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/565/565491.png" class="image__category">
                                 </th>
                             </tr>
                         </table>
@@ -60,6 +60,20 @@
                             </tr>
                         </table>
                     </div>
+
+                    <div class="block__for__all__notes">
+                        <table class="table__notes" id="table__archived__notes">
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Content</th>
+                                <th>
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1388/1388796.png" class="image__category">
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="create_modal">
@@ -67,7 +81,7 @@
                     <form method="post" class="modal__form">
                         <label>
                             Name:
-                            <input type="text" name="name">
+                            <input type="text" name="name" placeholder="name...">
                         </label>
                         <label>
                             Category:
@@ -79,16 +93,41 @@
                         </label>
                         <label>
                             Content:
-                            <textarea name="content"></textarea>
+                            <textarea name="content" placeholder="content..."></textarea>
                         </label>
                         <button type="submit">Create</button>
-                        <button type="reset" id="button__cancel">Cancel</button>
+                        <button type="reset" id="button__create__cancel">Cancel</button>
+                    </form>
+                </div>
+
+                <div class="edit_modal">
+                    <h3 class="modal__title">Edit note</h3>
+                    <form method="post" class="modal__edit__form">
+                        <label>
+                            Name:
+                            <input type="text" name="name" id="name">
+                        </label>
+                        <label>
+                            Category:
+                            <select name="category" id="category">
+                                <option>Task</option>
+                                <option>Random Thought</option>
+                                <option>Idea</option>
+                            </select>
+                        </label>
+                        <label>
+                            Content:
+                            <textarea name="content" id="content"></textarea>
+                        </label>
+                        <button type="submit">Edit</button>
+                        <button type="reset" id="button__edit__cancel">Cancel</button>
                     </form>
                 </div>
             </main>
         </div>
 
-        <script src="repositories/notes.repository.js" type="module"></script>
+
         <script src="app.js" type="module"></script>
+        <script src="events/create-note.events.js" type="module"></script>
     </body>
 </html>

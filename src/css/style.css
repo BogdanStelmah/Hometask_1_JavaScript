@@ -103,7 +103,7 @@ html, body {
 
 
 /*___Button___*/
-.delete, .edit, .archiving {
+.delete, .edit, .archiving, .unarchived {
     cursor: pointer;
 }
 
@@ -121,8 +121,8 @@ html, body {
 }
 
 
-/*__Create__Modal__*/
-.create_modal {
+/*___Create_and_edit_modal___*/
+.create_modal, .edit_modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -144,10 +144,10 @@ html, body {
     border-bottom: 2px solid white;
 }
 
-.create_modal::before {
+.create_modal::before, .modal__edit__form::before {
     content: '';
     width: 100vw;
-    height: 100vh;
+    height: 100vw;
     background-color: rgba(84, 84, 84, 0.41);
     position: absolute;
     top: 50%;
@@ -156,29 +156,36 @@ html, body {
     z-index: -1;
 }
 
-.modal__form {
+.modal__form, .modal__edit__form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.modal__form > label {
+.modal__form > label, .modal__edit__form > label {
     width: 100%;
 }
 
-.modal__form input, .modal__form select, .modal__form textarea {
+.modal__form input, .modal__form select, .modal__form textarea,
+.modal__edit__form input, .modal__edit__form select, .modal__edit__form textarea{
     width: 100%;
     padding: 5px;
 }
 
-.modal__form textarea {
+.modal__form textarea, .modal__edit__form textarea {
     height: 40px;
 }
-.modal__form button {
+.modal__form button, .modal__edit__form button {
     height: 25px;
 }
 
 .show {
     display: block;
 }
+
+.overflow__hidden {
+    overflow: hidden;
+}
+
+
 
