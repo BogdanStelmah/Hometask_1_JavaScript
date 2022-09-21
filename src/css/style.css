@@ -1,0 +1,193 @@
+/*___Онулення___*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+html, body {
+    height: 100%;
+    line-height: 1;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.__container {
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/*___Таблиця___*/
+.notes__image{
+    background-color: rgb(97,97,97);
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image__category {
+    width: 20px;
+    margin: 4px;
+}
+
+.table__notes {
+    width: 100%;
+    padding-top: 20px;
+    text-align: left;
+    border-spacing: 0 10px;
+}
+
+.table__notes th {
+    background-color: rgb(153, 153, 153);
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+}
+.table__notes th:nth-child(1){
+    border-radius: 6px 0 0 6px;
+}
+.table__notes th:last-child{
+    border-radius: 0 6px 6px 0;
+}
+
+.table__notes td {
+    background-color: rgb(232, 234, 245);
+    padding: 7px;
+    font-weight: 600;
+    color: #545454;
+}
+.table__notes td:nth-child(1) {
+    border-radius: 6px 0 0 6px;
+}
+.table__notes td:last-child{
+    border-radius: 0 6px 6px 0;
+}
+.block__for__all__notes > .table__notes tr td:last-child, .block__for__all__notes > .table__notes tr th:last-child{
+    text-align: right;
+}
+
+
+/*___Button___*/
+.delete, .edit, .archiving, .unarchived {
+    cursor: pointer;
+}
+
+.button__create__note {
+    width: 100px;
+    height: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+/*___Archive___*/
+.block__for__category, .block__for__all__notes {
+    width: 100%;
+}
+
+
+/*___Create_and_edit_modal___*/
+.create_modal, .edit_modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(110, 110, 110);
+    border-radius: 20px;
+    width: 500px;
+    height: 320px;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    display: none;
+}
+
+.modal__title {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid white;
+}
+
+.create_modal::before, .modal__edit__form::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(84, 84, 84, 0.41);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.modal__form, .modal__edit__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal__form > label, .modal__edit__form > label {
+    width: 100%;
+}
+
+.modal__form input, .modal__form select, .modal__form textarea,
+.modal__edit__form input, .modal__edit__form select, .modal__edit__form textarea{
+    width: 100%;
+    padding: 5px;
+}
+
+.modal__form textarea, .modal__edit__form textarea {
+    height: 40px;
+}
+.modal__form button, .modal__edit__form button {
+    height: 25px;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.overflow__hidden {
+    overflow: hidden;
+}
+
+
+
